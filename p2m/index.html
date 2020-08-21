@@ -1,0 +1,205 @@
+<html>
+
+<head>
+    <link rel="StyleSheet" href="style.css" type="text/css" media="all">
+    <title>Pixel2Mesh</title>
+    <meta property="og:title" content="Pixel2Mesh: Generating 3D Mesh Models from Single RGB Images">
+    <meta property="og:image" content="https://www.cs.cmu.edu/~wyuan1/cmr/resources/images/shapenet.png">
+    <meta property="og:url" content="https://youtu.be/bzJrPQilPxg">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body>
+    <br>
+    <div class="center-div">
+        <span style="font-size:40px">Pixel2Mesh: Generating 3D Mesh Models <br> from Single RGB Images</span>
+    </div>
+
+    <br>
+    <table align="center" width="1000px">
+        <tbody>
+            <tr>
+                <td align="center" width="150px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Nanyang Wang</a></span>
+                    </div>
+                </td>
+
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Yinda Zhang</a></span>
+                    </div>
+                </td>
+
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Zhuwen Li</a></span>
+                    </div>
+                </td>
+
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Yanwei Fu</a></span>
+                    </div>
+                </td>
+
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Wei Liu</a></span>
+                    </div>
+                </td>
+
+                <td align="center" width="150px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Yu-Gang Jiang</a></span>
+                    </div>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <table align="center" width="700px">
+        <tbody>
+            <tr>
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px">Fudan University &nbsp; &nbsp; Google &nbsp; &nbsp; Nuro &nbsp; &nbsp; Tencent </span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <table align="center" width="600px">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="center-div">
+                        <a href="#"><img src="./resources/images/pipeline.png" width="1000px"></a><br>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="center-div">
+                        <span style="font-size:14px"><i>Pixel2Mesh Pipeline.</i>
+                        </span></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+    <hr>
+    <div class="center-div">
+        <h1>Abstract</h1>
+    </div>
+    <p>
+        We propose an end-to-end deep learning architecture that produces a
+3D shape in triangular mesh from a single color image. Limited by the nature
+of deep neural network, previous methods usually represent a 3D shape in volume or point cloud, and it is non-trivial to convert them to the more ready-to-use
+mesh model. Unlike the existing methods, our network represents 3D mesh in a
+graph-based convolutional neural network and produces correct geometry by progressively deforming an ellipsoid, leveraging perceptual features extracted from
+the input image. We adopt a coarse-to-fine strategy to make the whole deformation procedure stable, and define various of mesh related losses to capture properties of different levels to guarantee visually appealing and physically accurate
+3D geometry. Extensive experiments show that our method not only qualitatively
+produces mesh model with better details, but also achieves higher 3D shape estimation accuracy compared to the state-of-the-art.
+    </p>
+    <br><br>
+
+    <hr>
+    <br><br>
+
+    <hr>
+    <div class="center-div">
+        <h1 id="paper">Paper, Code and Data</h1>
+    </div>
+    <table align="center" width="600px">
+
+        <tbody>
+            <tr>
+                <td>
+                    <img class="layered-paper-big" style="height:175px" src="./resources/images/page1.png">
+                </td>
+                <td>
+                    <span style="font-size:14pt">N. Wang, Y. Zhang, Z. Li, Y. Fu, W. Liu, Y. Jiang</span>
+                    <br><br>
+                    <b><span style="display:inline-block;width:600px;font-size:14pt">
+                            Pixel2Mesh: Generating 3D Mesh Models from Single RGB Images.</span></b>
+                    <br><br>
+                    <span style="font-size:14pt">ECCV, 2018. &nbsp; &nbsp; &nbsp; </span> 
+                    <span style="font-size:14pt">TPAMI.2020.2984232.</span>
+                    <br><br>
+                    <span style="font-size:20px">
+                        <a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Nanyang_Wang_Pixel2Mesh_Generating_3D_ECCV_2018_paper.pdf">[Paper(ECCV)]</a> &nbsp; &nbsp;
+                        <a href="./resources/doc/P2M_PAMI.pdf">[Paper(TPAMI)]</a> &nbsp; &nbsp;
+                        <a href="https://github.com/nywang16/Pixel2Mesh">[GitHub]</a> &nbsp; &nbsp;
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+    <hr>
+    <div class="center-div">
+        <h1 id="code">Results</h1>
+    </div>
+    <div class="center-div">
+        <table align="center" width="800px">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="center-div">
+                            <img src="./resources/images/shapenetresults.png" width="500px"><br>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="center-div">
+                            <img src="./resources/images/gene.png" width="500px"><br>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="center-div">
+                            <span style="font-size:14px"><i>Results on ShapeNet objects.</i>
+                            </span></div>
+                    </td>
+                    <td>
+                        <div class="center-div">
+                            <span style="font-size:14px"><i>Results on AFLW2000-3D dataset.</i>
+                            </span></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <br><br>
+    <hr>
+    <table align="center" width="980px">
+        <tbody>
+            <tr>
+                <td>
+                    <left>
+                        <div class="center-div">
+                            <h1>Acknowledgements</h1>
+                        </div>
+                        <div class="center-div">
+                        This work was supported in part by NSFC Projects (U1611461, 61702108), Science and Technology Commission of Shanghai Municipality Projects (19511120700, 19ZR1471800, 19511132000), Shanghai Research and Innovation Functional Program (17DZ2260900), Shanghai Municipal Science and Technology Major Project (2018SHZDZX01), and Eastern Scholar (TP2017006). The websiteis
+                        modified from this <a href="https://www.cs.cmu.edu/~wyuan1/pcn/">template</a>.
+                        </div>
+                    </left>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+
+
+</body>
+
+</html>
